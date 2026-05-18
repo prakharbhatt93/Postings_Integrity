@@ -261,25 +261,6 @@ Available pages:
 ---
 
 
-# File Structure
-
-```text
-proposal-api/
-├── fabric/
-│   ├── gateway.js
-│   └── wallet/
-├── nostr/
-│   └── nostrService.js
-├── uploads/
-├── ui/
-├── server.js
-├── nostr.json
-├── package.json
-└── README.md
-```
-
----
-
 # Common Commands
 
 ## Stop Fabric Network
@@ -306,49 +287,6 @@ docker rm -f $(docker ps -aq)
 ```bash
 docker system prune -a
 ```
-
----
-
-# Troubleshooting
-
-## Docker Permission Denied
-
-Run:
-
-```bash
-sudo usermod -aG docker $USER
-```
-
-Then logout/login.
-
----
-
-## Port Already in Use
-
-Kill existing Node server:
-
-```bash
-pkill node
-```
-
----
-
-## Fabric Containers Not Starting
-
-Check:
-
-```bash
-docker ps -a
-```
-
-Restart Docker:
-
-```bash
-sudo systemctl restart docker
-```
-
----
-
 
 # License
 
