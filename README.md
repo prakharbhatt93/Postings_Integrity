@@ -158,7 +158,7 @@ sudo apt install jq unzip -y
 ```
 ---
 
-# Clone This Repository
+# 9. Clone This Repository
 
 Move into fabric-samples application directory:
 
@@ -180,13 +180,13 @@ cd Proposal_Integrity
 
 ---
 
-# Make files executable
+# 10. Make files executable
 
 ```bash
 find . -type f \( -name "*.sh" -o -path "*/bin/*" \) -exec chmod +x {} \;
 ```
 
-# Initialize Fabric:
+# 11. Initialize Fabric:
 
 ```bash
 ./init-fabric.sh
@@ -211,7 +211,7 @@ cd ..
 
 ---
 
-# Start the server
+# 12. Start the server
 
 
 
@@ -233,7 +233,7 @@ Available pages:
 
 ---
 
-# Workflow Usage
+# 13. Workflow Usage
 
 ## Clerk
 
@@ -259,34 +259,6 @@ Available pages:
 * View Nostr audit events
 
 ---
-
-
-# Common Commands
-
-## Stop Fabric Network
-
-```bash
-cd ~/fabric-projects/fabric-samples/test-network
-./network.sh down
-```
-
-## Restart Server
-
-```bash
-node server.js
-```
-
-## Remove Old Containers
-
-```bash
-docker rm -f $(docker ps -aq)
-```
-
-## Remove Old Images
-
-```bash
-docker system prune -a
-```
 
 # License
 
