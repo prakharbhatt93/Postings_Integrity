@@ -7,7 +7,10 @@ const fs = require('fs');
 
 async function main() {
     try {
-        const ccpPath = "/home/bravo/Downloads/fabric-samples_18_04/fabric-samples/test-network/organizations/peerOrganizations/org1.example.com/connection-org1.json";
+        const ccpPath = path.resolve(
+    __dirname,
+    '../../../test-network/organizations/peerOrganizations/org1.example.com/connection-org1.json'
+);
         const ccp = JSON.parse(fs.readFileSync(ccpPath, "utf8"));
 
         const caInfo = ccp.certificateAuthorities['ca.org1.example.com'];
