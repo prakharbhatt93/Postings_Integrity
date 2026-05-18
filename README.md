@@ -176,7 +176,7 @@ git clone https://github.com/prakharbhatt93/Postings_Integrity.git
 Move into project:
 
 ```bash
-cd Proposal_Integrity
+cd Postings_Integrity
 ```
 
 ---
