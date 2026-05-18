@@ -115,6 +115,7 @@ Then logout and login again.
 Verify:
 
 ```bash
+newgrp docker
 docker ps
 ```
 
