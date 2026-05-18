@@ -15,7 +15,7 @@ This project implements a secure proposal approval workflow system using:
 
 # Prerequisites
 
-The following software must be installed on the Ubuntu VM before running the project. You can use VMWare to setup a an Ubuntu VM for running the project.
+The following software must be installed on the Ubuntu VM before running the project. You can use VMWare to setup a an Ubuntu VM for running the project. The version of ubuntu used during development is 24.04.03 LTS
 
 ---
 
