@@ -224,6 +224,9 @@ Open the Browser and goto http://localhost:3000
 The web portal opens showing 4 links. The portal for Clerk is used for creating a new proposal while the portals of Clerk and HoD are used for Recommending or Approving the proposals.
 The Admin portal is used for seeing the transaction data store on off-chain storage and on-chain storage as well.
 
+For creating a new proposal, the sample file is located inside the root directory of the cloned repository by the name of sampledata.csv.
+The files uploaded on the poratl are saved in the uploads folder in the path ~/Postings_Integrity-main.zip/Postings_Integrity-main/fabric-samples/application/proposal-api/uploads
+
 
 Available pages:
 
