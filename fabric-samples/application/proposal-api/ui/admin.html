@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Admin Dashboard</title>
+<link rel="stylesheet" href="style.css">
+</head>
+
+<body onload="loadAdmin()">
+
+<div class="header">
+Admin Dashboard
+<a href="index.html">Home</a>
+</div>
+
+<div class="container">
+
+<h2>System Data</h2>
+
+<button class="primary" onclick="loadAdmin()">Reload Data</button>
+
+<div class="section">
+
+<h3>Blockchain Data (Fabric)</h3>
+<pre id="anchors"></pre>
+
+</div>
+
+<div class="section">
+
+<h3>Offchain Data (Nostr)</h3>
+<pre id="events"></pre>
+
+</div>
+
+</div>
+
+<script src="app.js"></script>
+
+</body>
+</html>

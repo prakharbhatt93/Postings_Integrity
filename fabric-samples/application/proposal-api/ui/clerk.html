@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Clerk Portal</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body onload="loadClerkProposals()">
+
+<div class="header">
+    Clerk Portal
+    <a href="index.html">Home</a>
+</div>
+
+<div class="container">
+
+    <!--CREATE PROPOSAL -->
+    
+    <h2>Create Proposal</h2>
+
+    <input id="proposalId" placeholder="Proposal ID">
+    <input id="description" placeholder="Description">
+    <input type="file" id="csvFile" accept=".csv">
+
+    <button class="primary" onclick="createProposal()">Create Proposal</button>
+    <!--PROPOSAL LIST -->
+    <div class="section">
+        <h3>Your Proposals</h3>
+        <button class="secondary" onclick="loadClerkProposals()">Refresh</button>
+        <div id="proposalList"></div>
+    </div>
+
+    <!-- PROPOSAL VIEW -->
+    <div id="proposalView" class="section" style="display:none">
+
+        <!-- CSV TABLE -->
+        <h4>Proposal Details</h4>
+        <div id="csvTable"></div>
+        <div style="margin-top: 10px;">
+            <button id="editBtn" class="primary" onclick="enableEdit()" style="display:none;">
+                EDIT
+            </button>
+
+            <button id="saveBtn" class="secondary" onclick="saveEditedCSV()" style="display:none;">
+                SAVE
+            </button>
+        </div>
+        <!--REVISION SECTION-->
+        <div id="revisionSection" class="section" style="display:none">
+
+            <h3>Upload New Version</h3>
+
+            <input id="revisionDescription" placeholder="Description">
+            <input type="file" id="revisionCsv" accept=".csv">
+
+            <button class="primary" onclick="uploadNewVersion()">
+                Upload New CSV Version
+            </button>
+
+        </div>
+        <!--HISTORY -->
+
+        <h3>History</h3>
+        <div id="history"></div>
+
+    </div>
+
+</div>
+
+<!-- LIBRARIES-->
+
+<script src="papaparse.min.js"></script>
+
+
+<!--APP LOGIC-->
+
+<script src="app.js"></script>
+
+</body>
+</html>

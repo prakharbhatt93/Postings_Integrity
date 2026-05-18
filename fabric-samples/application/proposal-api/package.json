@@ -1,0 +1,29 @@
+{
+  "name": "proposal-api",
+  "version": "1.0.0",
+  "description": "Node.js backend for proposal workflow on Hyperledger Fabric",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "dev": "nodemon server.js"
+  },
+  "keywords": [
+    "hyperledger-fabric",
+    "blockchain",
+    "proposal",
+    "api"
+  ],
+  "author": "",
+  "license": "Apache-2.0",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "dotenv": "^16.0.0",
+    "express": "^4.19.0",
+    "fabric-ca-client": "^2.2.0",
+    "fabric-network": "^2.2.20",
+    "multer": "^2.1.1"
+  },
+  "devDependencies": {
+    "nodemon": "^3.1.0"
+  }
+}

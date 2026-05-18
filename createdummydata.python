@@ -1,0 +1,98 @@
+import csv
+import random
+
+# Output CSV file name
+filename = "dummy_posting_data.csv"
+
+# Sample data pools
+first_names = [
+    "Rahul", "Anita", "Vikram", "Neha", "Amit", "Sneha",
+    "Rohan", "Pooja", "Karan", "Meera", "Arjun", "Divya"
+]
+
+last_names = [
+    "Sharma", "Verma", "Singh", "Gupta", "Patel", "Reddy",
+    "Kumar", "Joshi", "Malhotra", "Nair", "Yadav", "Mishra"
+]
+
+designations = [
+    "Sepoy",
+    "Naik",
+    "Lance Naik",
+    "Havildar",
+    "Subedar",
+    "Subedar Major"
+]
+
+locations = [
+    "Delhi",
+    "Mumbai",
+    "Bangalore",
+    "Hyderabad",
+    "Chennai",
+    "Pune",
+    "Kolkata",
+    "Ahmedabad",
+    "Jaipur",
+    "Lucknow"
+]
+
+# CSV header
+header = [
+    "Serial Number",
+    "Service No.",
+    "Name",
+    "Designation",
+    "Current Posting Location",
+    "Proposed Posting Location",
+    "Remarks"
+]
+
+# Create CSV file
+with open(filename, mode="w", newline="", encoding="utf-8") as file:
+    writer = csv.writer(file)
+
+    # Write header
+    writer.writerow(header)
+
+    # Generate 1000 rows
+    for i in range(1, 1001):
+
+        # Generate service number like 123456A
+        service_no = f"{random.randint(100000, 999999)}{chr(random.randint(65, 90))}"
+
+        # Generate random name
+        name = f"{random.choice(first_names)} {random.choice(last_names)}"
+
+        # Random designation
+        designation = random.choice(designations)
+
+        # Random locations
+        current_location = random.choice(locations)
+
+        # Ensure proposed location is different
+        proposed_location = random.choice(
+            [loc for loc in locations if loc != current_location]
+        )
+
+        # Optional remarks
+        remarks = random.choice([
+            "",
+            "Priority Transfer",
+            "Medical Grounds",
+            "Administrative Requirement",
+            "Routine Posting"
+        ])
+
+        # Write row
+        writer.writerow([
+            i,
+            service_no,
+            name,
+            designation,
+            current_location,
+            proposed_location,
+            remarks
+        ])
+
+print(f"CSV file '{filename}' with 1000 rows created successfully.")

@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>HOD Portal</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body onload="loadProposals()">
+
+<div class="header">
+    HOD Portal
+    <a href="index.html">Home</a>
+</div>
+
+<div class="container">
+
+    <h2>Final Approval</h2>
+
+    <button class="secondary" onclick="loadProposals()">Refresh</button>
+
+    <div id="proposalList"></div>
+
+    <!-- PROPOSAL VIEW -->
+    <div id="proposalView" class="section" style="display:none">
+
+        <h3>Proposal Details</h3>
+        <div id="proposalDetails"></div>
+
+        <h4>Versions</h4>
+        <div id="versions"></div>
+        <h4>CSV Data</h4>
+        <div id="csvTable"></div>
+
+        <h3>History</h3>
+        <div id="history"></div>
+        <div class="section">
+
+            <label>Comment</label>
+            <textarea id="comment" placeholder="Final remarks..."></textarea>
+
+            <button class="primary" onclick="approveProposal()">Approve</button>
+            <button class="secondary" onclick="sendBackToOfficer()">Send Back</button>
+
+        </div>
+
+    </div>
+
+</div>
+
+
+<script src="papaparse.min.js"></script>
+<script src="app.js"></script>
+
+</body>
+</html>
